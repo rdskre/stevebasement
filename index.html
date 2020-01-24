@@ -12,8 +12,8 @@ th, td {
 tr:nth-child(even) {background-color: #f2f2f2;}
 tr:nth-child(odd) {background-color: #A9A9A9;}
 input.larger { 
-      transform: scale(3); 
-      margin: 5px;
+      transform: scale(2); 
+      margin: 2px;
 </style>
 <script>  
          function solve() 
@@ -58,11 +58,11 @@ input.larger {
 <tr><td>Premium Ceiling Tile ($1.50/sq. ft $489):<br><img src="premium.jpg"></td><td><input type="checkbox" name="options" id="premiumCeiling" class="larger"/><br />
 <tr><td>Moisture Resistant Drywall ($30):</td><td><input type="checkbox" name="options" id="moisture"  class="larger"/><br /> 
 <tr><td>New Doors ($220):</td><td><input type="checkbox" name="options" id="doors" class="larger" /><br /> 
-<tr><td>Window Seal ($50):</td><td><input type="checkbox" name="options" id="window"class="larger" /><br /> 
-<tr><td>Move Post ($150):</td><td><input type="checkbox" name="options" id="post"class="larger" /><br /> 
+<tr><td>Window Seal ($50):</td><td><input type="checkbox" name="options" id="window" class="larger" /><br /> 
+<tr><td>Move Post ($150):</td><td><input type="checkbox" name="options" id="post" class="larger" /><br /> 
 <tr><td>Heated Floor 25sq. ft (x $500):</td><td><input type="text" style="font-size:28pt" name="options" value="0" id="heated"><br>
 
-<tr><td>&nbsp;</td><td><button onclick="solve()">Calculate</button></td></tr>
+<tr><td>&nbsp;</td><td><button class="larger" onclick="solve()">Calculate</button></td></tr>
 <tr><th>Remainder:</th><td align="right"><input type="text" style="font-size:34pt" id="result2" value = "$1739"/></td></tr>
 </body>
 </html>
