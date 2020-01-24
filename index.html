@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  border-collapse: collapse;
+  width: 100%;}
+th, td {
+  text-align: left;
+  padding: 8px;}
+tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(odd) {background-color: #A9A9A9;}
+</style>
+<script>  
+         function solve() 
+         { 
+             let bathroom = document.getElementById("bathroom").checked ? 620 : 0
+             let moisture = document.getElementById("moisture").checked ? 30 : 0
+             let doors = document.getElementById("doors").checked ? 220 : 0
+             let wseal = document.getElementById("window").checked ? 50 : 0
+             let post = document.getElementById("post").checked ? 150 : 0
+             let basicCeiling = document.getElementById("basicCeiling").checked ? 195 : 0
+             let premiumCeiling = document.getElementById("premiumCeiling").checked ? 489 : 0
+             let heated = parseInt(document.getElementById("heated").value) * 500
+             let price = parseFloat(document.getElementById("ceramic").value)
+             let ceramic = document.getElementById("bathroom").checked ? eval('326*price') : eval('251*price')
+             let total = eval(`1739-${bathroom}-${moisture}-${doors}-${wseal}-${post}-${basicCeiling}-${premiumCeiling}-${heated}-${ceramic}`)
+             document.getElementById("result").value = "$" + total
+             if (total === 0){document.getElementById("result").style.color = "black"}
+             	else if (total > 0){document.getElementById("result").style.color = "green"}
+             	else {document.getElementById("result").style.color = "red"}
+             document.getElementById("result2").value = "$" + total
+         	 if (total === 0){document.getElementById("result2").style.color = "black"}
+             	else if (total > 0){document.getElementById("result2").style.color = "green"}
+             	else {document.getElementById("result2").style.color = "red"}
+         }        
+</script> 
+</head>
+<body>
+<h1>Steve Basement</h1>
+<table>
+<tr><th>Fixed Cost Estimate: </th><td>&nbsp;</td></tr>
+<tr><td>Drywall Materials and Labor</td><td align="right">$1485</td></tr>
+<tr><td>Ditra and Tile Labor Main Room</td><td align="right">$1931</td></tr>
+<tr><td>Ceiling Labor</td><td align="right">$ 720</td></tr>
+<tr><td>Dump Trash</td><td align="right">$ 125</td></tr>
+<tr><td>&nbsp;</td><td align="right">$4261</td></tr>
+<tr><td>&nbsp;</td><td align="right">-6000</td></tr>
+<tr><th>Remainder:</th><td align="right"><input type="text" style="font-size:14pt" id="result" value = "$1739"/></td></tr>
+<tr><th>Options</th><td>&nbsp;</td></tr>
+<tr><td>Ceramic Tile cost per sq. ft:</td><td><input type="text" name="options" value="1.0" id="ceramic"><br></td></tr>
+<tr><td>Tile Bathroom ($170 Ditra + $450 labor = $620 + 75 sqft ):</td><td><input type="checkbox" name="options" id="bathroom"  /></td>
+<tr><td>Basic Ceiling Tile ($0.60/sq. ft = $195.00):<br><img src="basicCeiling.jpg"></td><td><input type="checkbox" name="options" id="basicCeiling" /></td>
+<tr><td>Premium Ceiling Tile ($1.50/sq. ft $489):<br><img src="premiumCeiling.jpg"></td><td><input type="checkbox" name="options" id="premiumCeiling" /><br />
+<tr><td>Moisture Resistant Drywall ($30):</td><td><input type="checkbox" name="options" id="moisture"  /><br /> 
+<tr><td>New Doors ($220):</td><td><input type="checkbox" name="options" id="doors"  /><br /> 
+<tr><td>Window Seal ($50):</td><td><input type="checkbox" name="options" id="window" /><br /> 
+<tr><td>Move Post ($150):</td><td><input type="checkbox" name="options" id="post" /><br /> 
+<tr><td>Heated Floor 25sq. ft (x $500):</td><td><input type="text" name="options" value="0" id="heated"><br>
+
+<tr><td>&nbsp;</td><td><button onclick="solve()">Submit</button></td></tr>
+<tr><th>Remainder:</th><td align="right"><input type="text" style="font-size:14pt" id="result2" value = "$1739"/></td></tr>
+</body>
+</html>
