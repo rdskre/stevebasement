@@ -11,6 +11,9 @@ th, td {
   font-size:40pt}
 tr:nth-child(even) {background-color: #f2f2f2;}
 tr:nth-child(odd) {background-color: #A9A9A9;}
+input.larger { 
+      transform: scale(5); 
+      margin: 30px;
 </style>
 <script>  
          function solve() 
@@ -50,13 +53,13 @@ tr:nth-child(odd) {background-color: #A9A9A9;}
 <tr><th>Remainder:</th><td><input type="text" style="font-size:34pt" id="result" value = "$1739"/></td></tr>
 <tr><th>Options</th><td>&nbsp;</td></tr>
 <tr><td>Ceramic Tile cost per sq. ft:</td><td><input type="text" name="options" style="font-size:28pt" value="1.0" id="ceramic"><br></td></tr>
-<tr><td>Tile Bathroom ($170 Ditra + $450 labor = $620 + 75 sqft ):</td><td><input type="checkbox" name="options" id="bathroom"  /></td>
-<tr><td>Basic Ceiling Tile ($0.60/sq. ft = $195.00):<br><img src="basic.jpg"></td><td><input type="checkbox" name="options" id="basicCeiling" /></td>
-<tr><td>Premium Ceiling Tile ($1.50/sq. ft $489):<br><img src="premium.jpg"></td><td><input type="checkbox" name="options" id="premiumCeiling" /><br />
-<tr><td>Moisture Resistant Drywall ($30):</td><td><input type="checkbox" name="options" id="moisture"  /><br /> 
-<tr><td>New Doors ($220):</td><td><input type="checkbox" name="options" id="doors"  /><br /> 
-<tr><td>Window Seal ($50):</td><td><input type="checkbox" name="options" id="window" /><br /> 
-<tr><td>Move Post ($150):</td><td><input type="checkbox" name="options" id="post" /><br /> 
+<tr><td>Tile Bathroom ($170 Ditra + $450 labor = $620 + 75 sqft ):</td><td><input type="checkbox" name="options" id="bathroom" class="larger" /></td>
+<tr><td>Basic Ceiling Tile ($0.60/sq. ft = $195.00):<br><img src="basic.jpg"></td><td><input type="checkbox" name="options" id="basicCeiling" class="larger"/></td>
+<tr><td>Premium Ceiling Tile ($1.50/sq. ft $489):<br><img src="premium.jpg"></td><td><input type="checkbox" name="options" id="premiumCeiling" class="larger"/><br />
+<tr><td>Moisture Resistant Drywall ($30):</td><td><input type="checkbox" name="options" id="moisture"  class="larger"/><br /> 
+<tr><td>New Doors ($220):</td><td><input type="checkbox" name="options" id="doors" class="larger" /><br /> 
+<tr><td>Window Seal ($50):</td><td><input type="checkbox" name="options" id="window"class="larger" /><br /> 
+<tr><td>Move Post ($150):</td><td><input type="checkbox" name="options" id="post"class="larger" /><br /> 
 <tr><td>Heated Floor 25sq. ft (x $500):</td><td><input type="text" style="font-size:28pt" name="options" value="0" id="heated"><br>
 
 <tr><td>&nbsp;</td><td><button onclick="solve()">Calculate</button></td></tr>
