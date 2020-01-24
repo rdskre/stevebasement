@@ -15,43 +15,16 @@ th, td {
 tr:nth-child(even) {background-color: #f2f2f2;}
 tr:nth-child(odd) {background-color: #A9A9A9;}
 .button {
-  display: inline-block;
-  border-radius: 4px;
   background-color: #07646C;
   border: none;
-  color: #FFFFFF;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button span {
-  cursor: pointer;
+  text-decoration: none;
   display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button:hover span {
-  padding-right: 25px;
-}
-
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 24px;
 }
 input.larger { 
     transform: scale(2); 
@@ -94,7 +67,7 @@ input.xl {
 <tr><td>Ditra and Tile Labor Main Room</td><td>$1931</td></tr>
 <tr><td>Ceiling Labor</td><td>$ 720</td></tr>
 <tr><td>Dump Trash</td><td>$ 125</td></tr>
-<tr><td>&nbsp;</td><td>$4261</td></tr>
+<tr><th>TOTAL</th><td>$4261</td></tr>
 <tr><td>&nbsp;</td><td>-6000</td></tr>
 <tr><th>Remainder:</th><td><input type="text" style="font-size:34pt" id="result" value = "$1739"/></td></tr>
 <tr><th>Options Estimate</th><td>&nbsp;</td></tr>
