@@ -59,13 +59,11 @@ input.larger {
    let basicCeiling = document.getElementById("basicCeiling").checked ? 195 : 0
    let premiumCeiling = document.getElementById("premiumCeiling").checked ? 489 : 0
    let heated = parseInt(document.getElementById("heated").value)
-   let price = parseFloat(document.getElementById("ceramic").value)
+   let price = !document.getElementById("ceramic").value ? 0 : parseFloat(document.getElementById("ceramic").value) 
    let ceramic = document.getElementById("bathroom").checked ? eval('326*price') : eval('251*price')
    let total = eval(`1379-${bathroom}-${moisture}-${doors}-${wseal}-${post}-${basicCeiling}-${premiumCeiling}-${heated}-${ceramic}`)
    document.getElementById("result").value = "$" + total.toFixed(2)
-   if (total === 0){document.getElementById("result").style.color = "black"}
-     else if (total > 0){document.getElementById("result").style.color = "green"}
-     else {document.getElementById("result").style.color = "red"}
+   total >= 0 ? document.getElementById("result").style.color = "green":document.getElementById("result").style.color = "red"
    }
 </script> 
 </head>
