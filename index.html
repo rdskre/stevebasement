@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+table { 
+border-spacing: 0;
+border-collapse: collapse;
+}
+.header{
+  color:  #FFFFFF;
+  font-weight: bold;
+}
 th, tr {
   text-align: left
-  font-size: 30px;
+  font-size: 10px;
   overflow-x:hidden;
 }
 thead, tfoot {
-  background:#f9f9f9;
   display:table;
   width:100%;
-  width:calc(100% - 18px);
   font-size: 45px;
 }
 tbody {
@@ -21,7 +26,7 @@ tbody {
   overflow-x:hidden;
   display:block;
   width:100%;
-  font-size: 40px;
+  font-size: 25px;
 }
 tbody tr {
   display:table;
@@ -31,7 +36,7 @@ tbody tr {
 tr:nth-child(even) {background-color: #f2f2f2;}
 tr:nth-child(odd) {background-color: #A9A9A9;}
 .button {
-  background-color: #07646C;
+  background-color: #074773;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -41,10 +46,19 @@ tr:nth-child(odd) {background-color: #A9A9A9;}
   margin: 4px 2px;
   cursor: pointer;
   font-size: 50px;
-  vertical-align:middle;}
+  vertical-align:middle;
+  border-radius: 4px;}
+.button:active {
+  background-color: #ffffff;
+  box-shadow: 0 5px #666;
+  color: black;
+  transform: translateY(4px);}
 input.larger { 
     transform: scale(2); 
     margin: 2px;}
+strong {
+  font-weight: bold;
+}
 </style>
 <script>
   function solve() 
@@ -69,9 +83,9 @@ input.larger {
 </head>
 <body>
 <table>
-<thead><tr><td><strong>Steve Basement</strong></td><tr></thead>
+<thead><tr style="background:#07646C; background-color:#07646C;"><td><strong class="header">Steve Basement</strong></td><tr></thead>
 <tbody>
-<tr><td>Fixed Cost Estimate: </td><td>&nbsp;</td></tr>
+<tr><td><strong>Fixed Cost Estimate:</strong></td><td>&nbsp;</td></tr>
 <tr><td>Drywall Materials and Labor</td><td>$1485.00</td></tr>
 <tr><td>Ditra and Tile Labor Main Room</td><td>$1931.00</td></tr>
 <tr><td>Ceiling Labor</td><td>$&nbsp;&nbsp;720.00</td></tr>
@@ -89,7 +103,7 @@ input.larger {
 <tr><td>Window Seal ($50.00):</td><td><input type="checkbox" id="window" class="larger" /></td></tr>
 <tr><td>Move Post ($150.00):</td><td><input type="checkbox" id="post" class="larger" /></td></tr>
 <tr><td>Heated Floor:</td><td><select style="font-size:28pt" value="0" id="heated"><option value="0">0</option><option value="500">25 sq.ft ($500.00)</option><option value="700">50 sq.ft ($700.00)</option><option value="800">75 sq.ft ($800.00)</option></select></td></tr>
-</tbody><br><br><br><br><br><br><br><br>
-<tfoot><tr><td><button class="button" onclick="solve()"><span>Calculate</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="font-size:34pt;" id="result" value = "$1739.00"/></td></tr></tfoot>
+</tbody><br><br><br><br><br><br><br>
+<tfoot><tr  style="background:#07646C; background-color:#07646C;"><td><button class="button" onclick="solve()"><span>Calculate</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" style="font-size:34pt;" id="result" value = "$1739.00"/></td></tr></tfoot>
 </body>
 </html>
