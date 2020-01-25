@@ -14,8 +14,12 @@ tr, td {
   overflow-x:hidden;
   border: 0;
 }
+th{
+  text-align: right;
+  font-weight: normal;
+}
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #e2e2e2;
 }
 tr:nth-child(odd) {
   background-color: #A9A9A9;
@@ -75,35 +79,35 @@ input.larger {
     </tr>
     <tr>
       <td>Drywall Materials and Labor</td>
-      <td>$1485.00</td>
+      <th>$1485.00</th>
     </tr>
     <tr>
       <td>Ditra and Tile Labor Main Room</td>
-      <td>$1931.00</td>
+      <th>$1931.00</th>
     </tr>
     <tr>
       <td>Baseboard Labor and Materials</td>
-      <td>$&nbsp;&nbsp;360.00</td>
+      <th>$&nbsp;&nbsp;360.00</th>
     </tr>
     <tr>
       <td>Ceiling Labor</td>
-      <td>$&nbsp;&nbsp;720.00</td>
+      <th>$&nbsp;&nbsp;720.00</th>
     </tr>
     <tr>
       <td>Dump Trash</td>
-      <td>$&nbsp;&nbsp;125.00</td>
+      <th>$&nbsp;&nbsp;125.00</th>
     </tr>
     <tr>
       <td><strong>TOTAL</strong></td>
-      <td>$4261.00</td>
+      <th style="font-weight: bold;">$4261.00</th>
     </tr>
     <tr>
       <td>&nbsp;</td>
-      <td>-&nbsp;6000.00</td>
+      <th style="color: red; font-weight: bold;"><u style="text-decoration-color: black;">-&nbsp;6000.00</u></th>
     </tr>
-    <tr>
-      <td><strong>Remainder:</strong></td>
-      <td><strong>$1379.00</strong></td>
+    <tr style="background-color: white;">
+      <td ><strong>Remainder:</strong></td>
+      <th><strong style="color:green; font-weight: bold;">$1379.00</strong></th>
     </tr>
     <tr style="background:#07646C; background-color:#07646C;font-size: 30px; color: white">
       <td><strong>Options Estimate</strong></td>
@@ -156,7 +160,7 @@ input.larger {
         <button class="button" onclick="solve()">
           <span>Calculate</span>
         </button></td>
-      <td><input type="text" style="font-size: 28px;  width: 128px; margin: 7px;};" id="result" value = "$1379.00"/></td>
+      <td><input type="text" style="font-size: 28px; font-weight: bold; color: green;  width: 134px; margin: 7px;};" id="result" value = "$1379.00"/></td>
     </tr>
   </table>
 </body>
