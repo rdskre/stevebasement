@@ -113,7 +113,7 @@ input.larger {
     </tr>
     <tr>
       <td>Ceramic Tile cost/sq.ft:</td>
-      <td><input type="text" style="font-size:25px; width:125px; padding-right: 5px;" value="1.0" id="ceramic"></td>
+      <td><input type="text" style="font-size:25px; width:125px;" value="1.0" id="ceramic"></td>
     </tr>
     <tr>
       <td>Tile Bathroom (Materials and Labor $620.00 + 75 sq.ft):</td>
@@ -146,19 +146,20 @@ input.larger {
     <tr>
       <td>Heated Floor:&nbsp;&nbsp;</td>
       <td style="text-align:center;">
-        <select style="font-size:25px; width:125px;padding-right: 5px;" value="0" id="heated">
+        <select style="font-size:25px; width:125px;" value="0" id="heated">
           <option value="0">0</option>
           <option value="500">25 sq.ft ($500.00)</option>
           <option value="700">50 sq.ft ($700.00)</option>
           <option value="800">75 sq.ft ($800.00)</option>
         </select></td>
     </tr>
-    <tr style="background:#07646C; background-color:#07646C; font-size: 28px; padding-right: 5px;">
+    <tr style="background:#07646C; background-color:#07646C; font-size: 28px;">
       <td>
         <button class="button" onclick="solve()">
           <span>Calculate</span>
         </button></td>
-      <td style="text-align: left;"><input type="text" style="font-size: 28px; width:120px;" id="result" value = "$1379.00"/></td>
+      <td style="text-align: left;"><input type="text" style="font-size: 28px; width:128px; margin: 10px;
+};" id="result" value = "$1379.00"/></td>
     </tr>
   </table>
 </body>
