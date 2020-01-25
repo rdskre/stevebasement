@@ -61,7 +61,7 @@ input.larger {
 		let heated = parseInt(document.getElementById("heated").value) * 500
 		let price = parseFloat(document.getElementById("ceramic").value)
 		let ceramic = document.getElementById("bathroom").checked ? eval('326*price') : eval('251*price')
-		let total = eval(`1739-${bathroom}-${moisture}-${doors}-${wseal}-${post}-${basicCeiling}-${premiumCeiling}-${heated}-${ceramic}`)
+		let total = eval(`1739-${bathroom}-${shower}-${doors}-${wseal}-${post}-${basicCeiling}-${premiumCeiling}-${heated}-${ceramic}`)
 		document.getElementById("result").value = "$" + total
 		if (total === 0){document.getElementById("result").style.color = "black"}
 			else if (total > 0){document.getElementById("result").style.color = "green"}
@@ -114,19 +114,19 @@ input.larger {
 	</tr>
 	<tr>
 		<td>Ceramic Tile cost per sq. ft:</td>
-		<td><input type="text" name="options" style="font-size:28pt" value="1.0" id="ceramic"></td>
+		<td><input type="text" style="font-size:28pt" value="1.0" id="ceramic"></td>
 	</tr>
 	<tr>
 		<td>Tile Bathroom ($170 Ditra + $450 labor = $620 + 75 sqft ):</td>
-		<td><input type="checkbox" name="options" id="bathroom" class="larger" /></td>
+		<td><input type="checkbox" d="bathroom" class="larger" /></td>
 	</tr>
 	<tr>
 		<td>Basic Ceiling Tile ($0.60/sq. ft = $195.00):<br><img src="basic.jpg"></td>
-		<td><input type="checkbox" name="options" id="basicCeiling" class="larger"/></td>
+		<td><input type="checkbox" id="basicCeiling" class="larger"/></td>
 	</tr>
 	<tr>
 		<td>Premium Ceiling Tile ($1.50/sq. ft $489):<br><img src="premium.jpg"></td>
-		<td><input type="checkbox" name="options" id="premiumCeiling" class="larger"/></td>
+		<td><input type="checkbox" id="premiumCeiling" class="larger"/></td>
 	</tr>
 	<tr>
 		<td>Prepping Shower Materials and Labor($250):</td>
