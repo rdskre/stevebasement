@@ -4,27 +4,26 @@
 <meta name = "viewport" content = "width = 320">
 <head>
 <style>
+  body {    
+    margin: 0 !important;
+    padding: 0 !important;}
 table { 
 border-spacing: 0;
-border-collapse: collapse;
-}
+border-collapse: collapse;}
 .header{
   color:  #FFFFFF;
-  font-weight: bold;
-}
+  font-weight: bold;}
 th, tr {
   text-align: left
   width: 540px;
   font: sans-serif;
   font-size: 25px;
-  overflow-x:hidden;
-}
+  overflow-x:hidden;}
 thead, tfoot {
   display:table;
   width: 540px;
   font: sans-serif;
-  font-size: 45px;
-}
+  font-size: 45px;}
 tbody {
   height:720px;
   overflow:auto;
@@ -32,14 +31,12 @@ tbody {
   display:block;
   width: 540px;
   font: sans-serif;
-  font-size: 25px;
-}
+  font-size: 25px;}
 tbody tr {
   display:table;
   width: 540px;
   font: sans-serif;
-  table-layout:fixed;
-}
+  table-layout:fixed;}
 tr:nth-child(even) {background-color: #f2f2f2;}
 tr:nth-child(odd) {background-color: #A9A9A9;}
 .button {
@@ -80,7 +77,7 @@ strong {
    let heated = parseInt(document.getElementById("heated").value)
    let price = parseFloat(document.getElementById("ceramic").value)
    let ceramic = document.getElementById("bathroom").checked ? eval('326*price') : eval('251*price')
-   let total = eval(`1739-${bathroom}-${moisture}-${doors}-${wseal}-${post}-${basicCeiling}-${premiumCeiling}-${heated}-${ceramic}`)
+   let total = eval(`1439-${bathroom}-${moisture}-${doors}-${wseal}-${post}-${basicCeiling}-${premiumCeiling}-${heated}-${ceramic}`)
    document.getElementById("result").value = "$" + total.toFixed(2)
    if (total === 0){document.getElementById("result").style.color = "black"}
      else if (total > 0){document.getElementById("result").style.color = "green"}
@@ -90,11 +87,12 @@ strong {
 </head>
 <body>
 <table>
-<thead><tr style="background:#07646C; background-color:#07646C;"><td><strong class="header">Steve Basement</strong></td><tr></thead>
+<thead><tr style="background:#07646C; background-color:#07646C;"><td><strong class="header">Steve Basement Estimator</strong></td><tr></thead>
 <tbody>
 <tr><td><strong>Fixed Cost Estimate:</strong></td><td>&nbsp;</td></tr>
 <tr><td>Drywall Materials and Labor</td><td>$1485.00</td></tr>
 <tr><td>Ditra and Tile Labor Main Room</td><td>$1931.00</td></tr>
+<tr><td>Baseboard Labor and Materials</td><td>$&nbsp;&nbsp;300.00</td></tr>
 <tr><td>Ceiling Labor</td><td>$&nbsp;&nbsp;720.00</td></tr>
 <tr><td>Dump Trash</td><td>$&nbsp;&nbsp;125.00</td></tr>
 <tr><td><strong>TOTAL</strong></td><td>$4261.00</td></tr>
@@ -111,6 +109,6 @@ strong {
 <tr><td>Move Post ($150.00):</td><td><input type="checkbox" id="post" class="larger" /></td></tr>
 <tr><td>Heated Floor:</td><td><select style="font-size:25px" value="0" id="heated"><option value="0">0</option><option value="500">25 sq.ft ($500.00)</option><option value="700">50 sq.ft ($700.00)</option><option value="800">75 sq.ft ($800.00)</option></select></td><td>&nbsp;</td></tr>
 </tbody><br><br><br><br><br><br><br>
-<tfoot><tr  style="background:#07646C; background-color:#07646C;"><td><button class="button" onclick="solve()"><span>Calculate</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="result" value = "$1739.00"/></td></tr></tfoot>
+<tfoot><tr  style="background:#07646C; background-color:#07646C;"><td><button class="button" onclick="solve()"><span>Calculate</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="result" value = "$1439.00"/></td></tr></tfoot>
 </body>
 </html>
